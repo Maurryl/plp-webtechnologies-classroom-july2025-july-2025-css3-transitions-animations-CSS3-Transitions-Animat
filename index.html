@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Web Page with CSS & JavaScript</h1>
+    </header>
+
+    <main>
+        <!-- Part 1: CSS3 Transitions and Animations -->
+        <section class="assignment-part" id="part-1">
+            <h2>Part 1: CSS3 Dynamic Styling</h2>
+            <p>Hover over the button to see a transition effect. A continuous animation is running on the sphere below.</p>
+            
+            <div class="hover-container">
+                <button class="styled-button">Hover Me</button>
+            </div>
+
+            <div class="animation-container">
+                <div class="pulse-sphere"></div>
+            </div>
+        </section>
+        
+        <!-- Part 2: JavaScript Functions -->
+        <section class="assignment-part" id="part-2">
+            <h2>Part 2: JavaScript Functions</h2>
+            <p>This section demonstrates JavaScript functions. Click the button to calculate the area of a rectangle.</p>
+            
+            <div class="function-demo">
+                <p><strong>Rectangle Dimensions:</strong> <span>15px</span> by <span>20px</span></p>
+                <button id="calculate-area-btn">Calculate Area</button>
+                <p id="area-result"></p>
+            </div>
+            
+            <h3>Understanding Scope</h3>
+            <p>The variable <span class="code">globalVar</span> is defined outside the function and can be accessed anywhere. The variable <span class="code">localVar</span> is defined inside the function and is only accessible there.</p>
+        </section>
+
+        <!-- Part 3: Combining CSS Animations with JavaScript -->
+        <section class="assignment-part" id="part-3">
+            <h2>Part 3: Combining CSS & JavaScript</h2>
+            <p>Click the button below to trigger a CSS animation. The box will slide in and fade in at the same time.</p>
+            
+            <button id="trigger-animation-btn">Trigger Animation</button>
+            
+            <div class="animated-box">
+                <p>I'm animated with JavaScript!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dynamic Web Assignment</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

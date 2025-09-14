@@ -1,0 +1,118 @@
+/* --- Base Styles --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    max-width: 900px;
+    width: 100%;
+}
+
+.assignment-part {
+    background: white;
+    padding: 40px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.code {
+    background-color: #f1f1f1;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* --- Part 1: CSS Transitions & Animations --- */
+.styled-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    /* Transition for smooth hover effect */
+    transition: background-color 0.3s ease, 
+                transform 0.2s ease,
+                box-shadow 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pulse-sphere {
+    width: 60px;
+    height: 60px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    margin: 20px auto;
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+    
+    /* Continuous animation using @keyframes */
+    animation: pulse 2s infinite cubic-bezier(0.66, 0, 0.34, 1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+    }
+}
+
+/* --- Part 3: Classes for JavaScript-triggered Animations --- */
+.animated-box {
+    width: 250px;
+    height: 150px;
+    background-color: #27ae60;
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    
+    /* Initially hide the box and position it off-screen */
+    opacity: 0;
+    transform: translateY(20px);
+    
+    /* Define the transition properties for the animation */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* This class will be added by JavaScript to trigger the animation */
+.animated-box.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
